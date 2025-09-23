@@ -3,11 +3,11 @@ plugins {
     id 'maven-publish'
 }
 
-version = mod_version
 group = maven_group
+version = mod_version + "+" + minecraft_version + "-fabric"
 
 base {
-    archivesName = mod_id + "-fabric-" + minecraft_version
+    archivesName = mod_id
 }
 
 def targetJavaVersion = 21
@@ -71,6 +71,36 @@ processResources {
     exclude '.cache'
     filesMatching("fabric.mod.json") {
         expand replaceProperties
+    }
+}
+
+jar {
+    def licenseFile = rootProject.file("LICENSE.txt")
+    inputs.file(licenseFile)
+
+    from(licenseFile) {
+        rename { "LICENSE.txt" }
+    }
+
+    manifest {
+        attributes([
+                "Specification-Title"     : mod_id,
+                "Specification-Vendor"    : mod_authors,
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : mod_name,
+                "Implementation-Version"  : jar.archiveVersion,
+                "Implementation-Vendor"   : mod_authors,
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+sourcesJar {
+    def licenseFile = rootProject.file("LICENSE.txt")
+    inputs.file(licenseFile)
+
+    from(licenseFile) {
+        rename { "LICENSE.txt" }
     }
 }
 
