@@ -1,6 +1,5 @@
 package com.xunjang.mc.hajimaridisc.item;
 
-
 import com.xunjang.mc.hajimaridisc.util.RegisterUtil;
 import net.minecraft.world.item.Item;
 

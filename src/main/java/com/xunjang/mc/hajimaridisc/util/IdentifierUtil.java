@@ -2,7 +2,6 @@ package com.xunjang.mc.hajimaridisc.util;
 
 import com.xunjang.mc.hajimaridisc.common.ModConstant;
 import net.minecraft.resources.ResourceLocation;
-import org.intellij.lang.annotations.Identifier;
 
 /**
  * @author XunJang
