@@ -1,0 +1,10 @@
+{
+  "music_disc.hajimari_no_kyoku": {
+    "sounds": [
+      {
+        "name": "hajimaridisc:music_disc/hajimari_no_kyoku",
+        "stream": false
+      }
+    ]
+  }
+}

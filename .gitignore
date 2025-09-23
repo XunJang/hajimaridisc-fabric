@@ -1,0 +1,25 @@
+# eclipse
+eclipse
+bin
+.settings
+.metadata
+.classpath
+.project
+*.launch
+
+# idea
+.idea
+out
+*.ipr
+*.iws
+*.iml
+
+# gradle
+.gradle
+build
+
+# other
+classes
+logs
+run-data
+run

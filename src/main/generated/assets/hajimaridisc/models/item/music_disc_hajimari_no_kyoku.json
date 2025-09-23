@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hajimaridisc:item/music_disc_hajimari_no_kyoku"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "hajimaridisc:music_disc_hajimari_no_kyoku",
+    {
+      "id": "#minecraft:music_discs",
+      "required": false
+    }
+  ]
+}
