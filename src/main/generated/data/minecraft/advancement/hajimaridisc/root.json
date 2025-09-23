@@ -4,9 +4,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "hajimaridisc:music_disc_hajimari_no_kyoku"
-            ]
+            "items": "hajimaridisc:music_disc_hajimari_no_kyoku"
           }
         ]
       },
@@ -14,17 +12,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": {
       "translate": "text.hajimari_disc.advancement.got_music_disc_hajimari_no_kyoku.desc"
     },
-    "frame": "task",
-    "hidden": false,
     "icon": {
-      "item": "hajimaridisc:music_disc_hajimari_no_kyoku"
+      "count": 1,
+      "id": "hajimaridisc:music_disc_hajimari_no_kyoku"
     },
-    "show_toast": true,
     "title": {
       "translate": "text.hajimari_disc.advancement.got_music_disc_hajimari_no_kyoku"
     }

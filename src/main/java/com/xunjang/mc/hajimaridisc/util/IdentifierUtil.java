@@ -2,7 +2,6 @@ package com.xunjang.mc.hajimaridisc.util;
 
 import com.xunjang.mc.hajimaridisc.common.ModConstant;
 import net.minecraft.resources.ResourceLocation;
-import org.intellij.lang.annotations.Identifier;
 
 /**
  * @author XunJang
@@ -18,12 +17,12 @@ public class IdentifierUtil {
 
     // Get from path
     public static ResourceLocation fromPath(String path) {
-        return new ResourceLocation(ModConstant.MOD_NAMESPACE, path);
+        return ResourceLocation.fromNamespaceAndPath(ModConstant.MOD_NAMESPACE, path);
     }
 
     // Get from id
     public static ResourceLocation fromId(String id) {
-        return new ResourceLocation(id);
+        return ResourceLocation.parse(id);
     }
 
 }

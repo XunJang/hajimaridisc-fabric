@@ -3,7 +3,6 @@ package com.xunjang.mc.hajimaridisc.client;
 import com.xunjang.mc.hajimaridisc.client.datagen.advancement.ModAdvancementProvider;
 import com.xunjang.mc.hajimaridisc.client.datagen.model.ModItemModelProvider;
 import com.xunjang.mc.hajimaridisc.client.datagen.recipe.ModRecipeProvider;
-import com.xunjang.mc.hajimaridisc.client.datagen.tag.ModItemTagProvider;
 import com.xunjang.mc.hajimaridisc.client.datagen.translation.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -26,6 +25,6 @@ public class HajimariDiscDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModItemModelProvider::new);
         // Recipe
         pack.addProvider(ModRecipeProvider::new);
-        // Tag
-        pack.addProvider(ModItemTagProvider::new);    }
+    }
+
 }

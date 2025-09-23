@@ -1,11 +1,13 @@
 {
-  "type": "minecraft:blasting",
+  "type": "minecraft:smelting",
   "category": "misc",
-  "cookingtime": 600,
+  "cookingtime": 1200,
   "experience": 5.0,
   "group": "diamond_ingot",
   "ingredient": {
     "item": "hajimaridisc:music_disc_hajimari_no_kyoku"
   },
-  "result": "minecraft:diamond"
+  "result": {
+    "id": "minecraft:diamond"
+  }
 }

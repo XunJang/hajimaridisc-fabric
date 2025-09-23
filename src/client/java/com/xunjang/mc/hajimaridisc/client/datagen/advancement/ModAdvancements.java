@@ -5,7 +5,8 @@ import com.xunjang.mc.hajimaridisc.common.ModConstant;
 import com.xunjang.mc.hajimaridisc.item.ModItems;
 import com.xunjang.mc.hajimaridisc.util.IdentifierUtil;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.FrameType;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.network.chat.Component;
 
@@ -17,7 +18,7 @@ import java.util.function.Consumer;
  * @date 2025/09/04
  * @time 07:08
  */
-public class ModAdvancements implements Consumer<Consumer<Advancement>> {
+public class ModAdvancements implements Consumer<Consumer<AdvancementHolder>> {
 
     private static ModAdvancements advancements;
 
@@ -34,13 +35,13 @@ public class ModAdvancements implements Consumer<Consumer<Advancement>> {
     }
 
     @Override
-    public void accept(Consumer<Advancement> consumer) {
+    public void accept(Consumer<AdvancementHolder> consumer) {
         Advancement rootAdvancement = Advancement.Builder.advancement()
                 .display(ModItems.MUSIC_DISC_HAJIMARI_NO_KYOKU,
                         Component.translatable(ModTranslationKey.TEXT_ADVANCEMENT_GOT_MUSIC_DISC_HAJIMARI_NO_KYOKU),
                         Component.translatable(ModTranslationKey.TEXT_ADVANCEMENT_GOT_MUSIC_DISC_HAJIMARI_NO_KYOKU_DESC),
                         IdentifierUtil.fromId("textures/gui/advancements/backgrounds/adventure.png"),
-                        FrameType.TASK,
+                        AdvancementType.TASK,
                         true,
                         true,
                         false
@@ -49,7 +50,8 @@ public class ModAdvancements implements Consumer<Consumer<Advancement>> {
                         "got_music_disc_hajimari_no_kyoku",
                         InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MUSIC_DISC_HAJIMARI_NO_KYOKU)
                 )
-                .save(consumer, ModConstant.MOD_NAMESPACE + "/root");
+                .save(consumer, ModConstant.MOD_NAMESPACE + "/root")
+                .value();
     }
 
 }

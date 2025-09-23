@@ -13,6 +13,7 @@ public class ModConstant {
     // Music disc "はじまりの曲"
     public static final String HAJIMARI_NO_KYOKU_DISC_ID = "music_disc_hajimari_no_kyoku";
     public static final String HAJIMARI_NO_KYOKU_SOUND_PATH = "music_disc.hajimari_no_kyoku";
+    public static final String HAJIMARI_NO_KYOKU_SOUND_KEY = "hajimari_no_kyoku";
 
     private ModConstant() {
 

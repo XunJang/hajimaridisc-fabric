@@ -17,10 +17,10 @@ public class ModLootTableId {
     public static final ResourceLocation EVOKER;
 
     static {
-        ZOMBIE = EntityType.ZOMBIE.getDefaultLootTable();
-        PILLAGER = EntityType.PILLAGER.getDefaultLootTable();
-        VINDICATOR = EntityType.VINDICATOR.getDefaultLootTable();
-        EVOKER = EntityType.EVOKER.getDefaultLootTable();
+        ZOMBIE = EntityType.ZOMBIE.getDefaultLootTable().location();
+        PILLAGER = EntityType.PILLAGER.getDefaultLootTable().location();
+        VINDICATOR = EntityType.VINDICATOR.getDefaultLootTable().location();
+        EVOKER = EntityType.EVOKER.getDefaultLootTable().location();
     }
 
     private ModLootTableId() {

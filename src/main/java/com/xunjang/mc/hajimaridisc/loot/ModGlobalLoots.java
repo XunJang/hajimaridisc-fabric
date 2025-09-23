@@ -1,7 +1,8 @@
 package com.xunjang.mc.hajimaridisc.loot;
 
 import com.xunjang.mc.hajimaridisc.item.ModItems;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition;
@@ -16,8 +17,10 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 public class ModGlobalLoots {
 
     static {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) ->
+        LootTableEvents.MODIFY.register((resourceKey, tableBuilder, source, registries) ->
         {
+            ResourceLocation id = resourceKey.location();
+
             if (source.isBuiltin() && ModLootTableId.ZOMBIE.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .when(LootItemKilledByPlayerCondition.killedByPlayer())

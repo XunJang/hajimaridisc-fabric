@@ -2,6 +2,9 @@ package com.xunjang.mc.hajimaridisc.client.datagen.translation;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.core.HolderLookup;
+
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author XunJang
@@ -11,12 +14,12 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
  */
 public class LangEnUsProvider extends FabricLanguageProvider {
 
-    public LangEnUsProvider(FabricDataOutput dataGenerator) {
-        super(dataGenerator, "en_us");
+    public LangEnUsProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, "en_us", registryLookup);
     }
 
     @Override
-    public void generateTranslations(TranslationBuilder translationBuilder) {
+    public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModTranslationKey.MUSIC_DISC_HAJIMARI_NO_KYOKU, ModTranslationText.MUSIC_DISC_EN_US);
         translationBuilder.add(ModTranslationKey.MUSIC_DISC_HAJIMARI_NO_KYOKU_DESC, ModTranslationText.MUSIC_DISC_HAJIMARI_NO_KYOKU);
         translationBuilder.add(ModTranslationKey.TEXT_ADVANCEMENT_GOT_MUSIC_DISC_HAJIMARI_NO_KYOKU, ModTranslationText.ADVANCEMENT_GOT_MUSIC_DISC_HAJIMARI_NO_KYOKU_EN_US);

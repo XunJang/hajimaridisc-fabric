@@ -3,13 +3,14 @@ package com.xunjang.mc.hajimaridisc.client.datagen.recipe;
 import com.xunjang.mc.hajimaridisc.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author XunJang
@@ -23,12 +24,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             ModItems.MUSIC_DISC_HAJIMARI_NO_KYOKU
     );
 
-    public ModRecipeProvider(FabricDataOutput dataGeneration) {
-        super(dataGeneration);
+    public ModRecipeProvider(FabricDataOutput dataGeneration, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(dataGeneration, registriesFuture);
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    public void buildRecipes(RecipeOutput consumer) {
         oreSmelting(
                 consumer,
                 itemList,

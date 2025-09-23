@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hajimaridisc.music_disc_hajimari_no_kyoku.desc"
+  },
+  "length_in_seconds": 102,
+  "sound_event": "hajimaridisc:music_disc.hajimari_no_kyoku"
+}
